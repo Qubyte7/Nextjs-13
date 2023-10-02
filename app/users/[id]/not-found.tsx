@@ -2,7 +2,7 @@ import React from 'react'
 
 const UserNoteFound = () => {
   return (
-    <div>User does not exists !</div>
+    <div>User doesn&apos;t exists !</div>
   )
 }
 
