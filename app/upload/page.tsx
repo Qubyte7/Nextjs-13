@@ -11,15 +11,29 @@ const [publicId , setPublicId]= useState('');
     <>
     {publicId && 
     <CldImage src={publicId} width={270} height={180} alt='image'/>}
-    <CldUploadWidget 
+     <CldUploadWidget 
     uploadPreset='lxkzr8hs' 
+    options={{
+      sources : ['local'],
+      multiple: false,
+      maxFiles: 5,
+    }}
     onUpload={(result,widget)=> {
       if(result.event !== 'success')return;
       const info = result.info as CloudinaryResult;
       setPublicId(info.public_id);
       }}>
-      {({open}) => <button className='btn btn-primary' onClick={() => open()}> Upload </button>}
+      {({open}) => {
+        function handleOnClick(e:any) {
+            e.preventDefault();
+            open();
+          }
+          return(
+      <button className='btn btn-primary' onClick={handleOnClick}> Upload </button>
+      );
+    }}
     </CldUploadWidget>
+    {/* you can customize the uploading widget by going to this url : demo.cloudinary.com/uw/#/ */}
     </>
   )
 }
