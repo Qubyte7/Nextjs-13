@@ -2,11 +2,20 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter,Poppins } from "next/font/google";
 import NavBar from "./components/NavBar";
+import localFont from 'next/font/local'
 import AuthProvider from "./auth/Provider";
 import GooogleAnalyticsScript from "./GoogleAnalyticsScript";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({subsets:["latin"],weight:['400','500']})
+const nunito= localFont({
+  src:'../public/fonts/nunito.ttf',
+  variable:'--font-nunito'
+})
+const caveat = localFont({
+  src:'../public/fonts/caveat.ttf',
+  variable:'--font-caveat'
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,8 +29,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="winter">
-      <GooogleAnalyticsScript />
-      <body className={poppins.className}>
+      {/* <GooogleAnalyticsScript /> */}
+      <body className={caveat.variable}>
         <AuthProvider>
           <NavBar />
           <main className="p-5">{children}</main>
