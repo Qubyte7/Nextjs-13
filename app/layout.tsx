@@ -20,12 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="winter">
       <GooogleAnalyticsScript />
-      <AuthProvider>
-        <body className={inter.className}>
+      <body className={inter.className}>
+        <AuthProvider>
           <NavBar />
           <main className="p-5">{children}</main>
-        </body>
-      </AuthProvider>
+        </AuthProvider>
+      </body>
     </html>
   );
 }
