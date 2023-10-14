@@ -55,3 +55,9 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model Product {
+  id     Int    @id @unique
+  name   String
+  prince Int
+}

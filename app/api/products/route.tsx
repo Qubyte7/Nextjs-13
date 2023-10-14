@@ -26,3 +26,11 @@ export async function POST(req:NextRequest){
     return NextResponse.json(createdProduct,{status:201})
 
     }
+
+    export async function generateMetadata():Promise<Metadata>{
+        const product  = await fetch('');//fetch like the url of the dynamic page content , on our case it is the  product
+        return{
+          title:'product.title',
+          descripton:'...'
+        }
+      }

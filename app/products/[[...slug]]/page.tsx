@@ -12,4 +12,5 @@ const ProductPage = ({params :{slug},searchParams:{sortOrder}}:Props) => {
 
 export default ProductPage
 
+
 // [[..slug]] = [[]] : menas that this  is optional ,  then the ... means the it is url which can contain more than one path
