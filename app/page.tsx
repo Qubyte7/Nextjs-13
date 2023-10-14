@@ -21,6 +21,7 @@
 
 import React from 'react'
 import Image  from 'next/image'
+import { Metadata } from 'next'
 
 export default async function Home() {
   return (
@@ -31,6 +32,10 @@ export default async function Home() {
   <h1>INNOCENT</h1>
   </div>
   )
+}
+export const metadata : Metadata ={
+  title:'Shami',
+  description:'selling goods'
 }
 
  
