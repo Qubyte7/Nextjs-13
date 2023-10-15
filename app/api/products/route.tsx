@@ -1,6 +1,10 @@
 import { NextRequest,NextResponse } from "next/server";
 import schema from "./schema";
 import prisma from "@/prisma/client1";
+interface Product{
+    name :string;
+    price :number;
+}
 
 export async function GET(req:NextRequest){
 const products = await prisma.product.findMany();
@@ -16,7 +20,7 @@ export async function POST(req:NextRequest){
         return NextResponse.json(validation.error.errors,{status:400})
     }
  
- const createdProduct = await prisma.product.create({
+ const createdProduct  = await prisma.product.create({
         data:{
             name:body.name,
             price:body.price,
@@ -27,10 +31,10 @@ export async function POST(req:NextRequest){
 
     }
 
-    export async function generateMetadata():Promise<Metadata>{
-        const product  = await fetch('');//fetch like the url of the dynamic page content , on our case it is the  product
-        return{
-          title:'product.title',
-          descripton:'...'
-        }
-      }
+    // export async function generateMetadata():Promise<Metadata>{
+    //     const product  = await fetch('');//fetch like the url of the dynamic page content , on our case it is the  product
+    //     return{
+    //       title:'product.title',
+    //       descripton:'...'
+    //     }
+    //   }
