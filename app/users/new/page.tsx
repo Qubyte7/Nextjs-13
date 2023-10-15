@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation';
 import React from 'react'
 
-const newUser = () => {
+const NewUser = () => {
 const router = useRouter();
 
   return (
@@ -11,4 +11,4 @@ const router = useRouter();
   )
 }
 
-export default newUser
+export default NewUser

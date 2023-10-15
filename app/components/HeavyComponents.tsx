@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeavyComponents = () => {
   return (
-    <div>HeavyComponents  "HEY NOT THAT THE LAZY LOADING IS DONE WHEN WE HAVE A COMPONENT WITH A LOT OF CONTENT" 
+    <div>HeavyComponents  &qout HEY NOT THAT THE LAZY LOADING IS DONE WHEN WE HAVE A COMPONENT WITH A LOT OF CONTENT &qout
         <h1>IT is not Advisible to lazy a page with less content ! 😎😎</h1>
         <h6>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, a? Vero blanditiis aliquam ad, vel provident mollitia eveniet quasi ipsum doloremque, ipsa tempore aspernatur iusto consectetur laboriosam cumque ipsam sapiente?
